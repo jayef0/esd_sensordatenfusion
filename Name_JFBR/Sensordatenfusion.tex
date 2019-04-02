@@ -1,0 +1,163 @@
+%---------------------------------------------------------------------------------------------------------------------------
+% Kopf des Vortrags
+%---------------------------------------------------------------------------------------------------------------------------
+
+\part{Sensordatenfusion}
+\begin{center}
+Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ email: janfabian.fabriczek@stud.hs-esslingen.de \\[1cm] 01. April 2019 \\[1cm]
+\end{center}
+
+
+%---------------------------------------------------------------------------------------------------------------------------
+% Textteil
+%---------------------------------------------------------------------------------------------------------------------------
+\section*{Einleitung}
+\label{Kap_Einleitung}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu quam id lacus mattis iaculis. Vestibulum eros sem, posuere a volutpat vitae, aliquet eget ligula. Suspendisse eget neque vulputate, ornare nisl et, pharetra enim. Pellentesque lorem enim, fermentum eu ornare eget, pellentesque in augue. Ut id placerat nunc. Proin iaculis eget lacus commodo luctus. Aliquam erat volutpat. Sed sollicitudin placerat enim. Nunc cursus et sapien at semper. Donec ac est nisl. Maecenas pharetra vestibulum augue, facilisis tempor neque finibus ornare. Phasellus mollis ac felis ut volutpat. Quisque auctor rhoncus ex, vel tincidunt lacus placerat sit amet.
+
+Aenean sed commodo ipsum, in dictum quam. In rutrum metus ut nisi maximus ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vehicula dictum sem pulvinar eleifend. In quis mattis tortor, non auctor libero. Aenean tincidunt blandit urna, quis tristique lectus placerat quis. Nunc vel turpis ac sem imperdiet facilisis. Nunc semper consequat dui, non rhoncus orci lobortis vitae. Ut lobortis eget magna sed ultricies. Proin arcu turpis, accumsan a elementum quis, dapibus eu ligula.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Funktionsweise}
+
+Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. Donec turpis quam, maximus et vulputate convallis, suscipit quis magna. Cras vel enim egestas, molestie nulla at, commodo diam. Sed quis posuere sem, sit amet bibendum odio. Mauris consequat ligula eget pharetra elementum. Phasellus fringilla dui sollicitudin tempor aliquam. Nulla facilisi.
+
+Fusce accumsan sollicitudin est sit amet ornare. Phasellus bibendum neque sit amet nunc consectetur dapibus. Sed euismod, lorem vitae porta vulputate, arcu magna aliquet sem, sed pharetra mi justo sed quam. Quisque ullamcorper eget nulla ut fermentum. Proin venenatis feugiat urna. In hac habitasse platea dictumst. Nullam et massa sit amet arcu consequat mattis ut id metus.
+
+Proin vel convallis erat, ac finibus ex. Pellentesque cursus gravida elit. In pharetra arcu lectus, in aliquet ligula bibendum vitae. Integer sem lacus, molestie a elit id, interdum vestibulum leo. Phasellus augue nunc, mollis at gravida id, malesuada a massa. Fusce erat urna, ullamcorper ut odio non, lacinia tempus nisl. Maecenas efficitur justo quis libero imperdiet, quis porttitor enim placerat.
+
+Ut dignissim purus erat, non semper sapien ornare sit amet. Nunc ut ligula ipsum. Nullam vehicula diam sed velit ornare, non auctor nibh sodales. Integer vehicula, elit posuere laoreet mollis, lacus elit convallis odio, et viverra neque eros ac eros. Ut a enim ligula. Aliquam aliquet dolor sit amet nisi commodo, sit amet viverra purus tristique. Curabitur elit libero, vehicula ut nibh et, maximus sagittis turpis. Aliquam erat volutpat. Donec ornare eros non eros fringilla, at rhoncus velit sodales. Nulla facilisi. Curabitur vitae felis non justo dignissim accumsan ut vel leo. Cras quis elit porttitor massa rhoncus mattis vitae ut augue.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Fusionstypen}
+
+Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi volutpat orci a odio scelerisque ultricies. Nunc aliquet, elit quis mollis egestas, tellus urna pellentesque quam, eget ornare ligula urna in lorem. Nullam ac dui elementum, consequat odio at, blandit felis. Quisque blandit sed ligula in hendrerit. In maximus, tellus sed lacinia accumsan, dui purus dignissim justo, ut pulvinar massa ligula sit amet massa. Vestibulum sed commodo lorem, vitae ornare ligula. Nulla pretium quam vel leo efficitur iaculis. Curabitur nisi ante, venenatis vel interdum at, molestie at lorem. Donec hendrerit dui sed commodo facilisis.
+
+\subsection*{Across Sensors - Data Fusion}
+
+Nunc pellentesque lacinia metus vehicula auctor. In congue purus diam, vel sollicitudin sapien maximus vehicula. Maecenas dui magna, feugiat vitae sem id, placerat consequat tortor. Mauris consectetur mollis mauris, at vehicula tortor aliquam tincidunt. Nunc ut purus eu magna fringilla facilisis. Integer mi lectus, aliquam consectetur tortor id, suscipit finibus quam. Etiam eget risus ornare, accumsan quam eu, semper justo. Vestibulum efficitur lectus arcu. Sed eu augue sodales, varius nibh et, lobortis mauris. Sed eu metus id diam congue laoreet nec ac diam. Pellentesque a est ut quam tempus dignissim condimentum at mauris. Curabitur nec fringilla nibh. Phasellus varius vitae augue sed varius.
+
+\subsection*{Across Attributes - Feature Fusion}
+
+Ut vehicula ultricies maximus. Morbi lacus quam, tincidunt at interdum in, aliquet tempus sem. In maximus eleifend nunc, eu congue ligula pellentesque in. Vivamus euismod metus vitae neque volutpat pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent dictum mauris non ultrices commodo. Vivamus varius ex dui, in pretium ipsum convallis a. Proin eleifend feugiat ex. Maecenas id vestibulum lorem. Fusce sed porta felis, ac vehicula diam. Sed tincidunt urna a lorem facilisis facilisis.
+
+\subsection*{Across Domains - Decision Fusion}
+
+Donec venenatis eleifend turpis in mollis. Praesent id mi quis justo feugiat viverra. Sed pellentesque, sapien id iaculis feugiat, ipsum lacus laoreet eros, eget congue urna arcu ac lorem. Cras consectetur nisi viverra, tincidunt dui eleifend, blandit massa. Proin lobortis nisl urna, non rhoncus orci lacinia a. Aenean efficitur imperdiet arcu, porttitor porta justo convallis sit amet. Maecenas malesuada vel lectus dignissim aliquet. Pellentesque sollicitudin, eros eget scelerisque accumsan, nibh ex iaculis sapien, in hendrerit eros urna ut risus. Nullam sed lorem at odio volutpat finibus id vitae nunc. Donec turpis felis, vehicula vel leo at, feugiat lacinia lacus. Vivamus a mauris orci.
+
+\subsection*{Across Time}
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Sensorkonfigurationen}
+
+\subsection*{Redundant und kompetitiv}
+
+Ut sed convallis nulla. Sed id mauris lorem. Phasellus sodales, ante ut dictum congue, tortor elit sodales felis, in elementum leo lectus et enim. Integer faucibus sagittis neque, quis vestibulum odio maximus ut. Nullam non nulla quis odio commodo accumsan eget eget tortor. Ut luctus porta sem. Nam nec rhoncus ligula. Fusce rutrum consequat erat, quis congue ligula porta sit amet. Fusce ultrices eros non quam elementum, nec accumsan ex euismod. Sed convallis purus ac aliquet pellentesque.
+
+\subsection*{Komplementär}
+
+Pellentesque eget turpis quam. Integer varius ante id felis tincidunt, in pharetra lorem laoreet. Curabitur euismod nibh nec nulla maximus, et eleifend quam accumsan. Curabitur blandit pretium enim, quis semper neque consequat et. Donec sollicitudin bibendum neque vitae finibus. Vivamus nec nisi fermentum, tempor ex facilisis, fermentum felis.
+
+\subsection*{Kooperativ}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Vorteile}
+
+Praesent porttitor lacus in convallis mattis. Pellentesque efficitur nisl vel mi congue tincidunt. In eu libero tempor, ultricies leo vel, ornare quam. Donec et magna tristique, vulputate purus ut, ultricies ante. Morbi sit amet nunc viverra eros luctus elementum. Aenean mauris augue, laoreet eget varius ornare, scelerisque vitae metus.
+
+Suspendisse porttitor elementum lorem, non dapibus tellus pellentesque at. In imperdiet odio nisl, volutpat auctor dui fringilla a. Maecenas laoreet pulvinar nibh ut vestibulum. Integer ornare, risus in fermentum ultrices, est erat imperdiet augue, a porttitor elit mi vitae magna. Curabitur id enim dui. Integer eget vestibulum lectus. Duis facilisis sagittis lorem, vel egestas mi tempus quis.
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Nachteile}
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}[ht]
+ \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/Zustandsraum_diskret.jpg}}
+ \caption {Condimentum laoreet, lacus nisl pretium}
+ \label{Abb_Zustandsraum} 
+\end{figure}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Einsatzgebiete}
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+
+%------------------------------------------------------------------------------------------------------------------------
+\section*{Zusammenfassung}
+\subsection*{Prädiktion}
+\label{Kap_Praediktion}
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+
+%------------------------------------------------------------------------------------------------------------------------
+
+\subsection*{Korrektur}
+\label{Kap_Korrektur}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. 
+
+\begin{enumerate}
+\item Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit.
+\item Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit.
+\end{enumerate}
+
+\vspace{5mm}
+
+Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{}
+
+\bibitem{Ref_PGN07}
+Wikipedia, Online Nachschlagewerk: \textit{"'Primary Guidance, Navigation and Control System"'},\\  \href{http://de.wikipedia.org/wiki/Primary\_Guidance\%2C\_Navigation\_and\_Control\_System}{http://de.wikipedia.org/wiki/Primary\_Guidance\\\%2C\_Navigation \_and\_Control\_System}, Okt. 2007
+
+\bibitem{Ref_WEN00}
+Wenzel, L.: \textit{"'Kalman-Filter - Ein mathematisches Modell zur Auswertung von Messdaten für Regelungstechnik, Teil 1"'}, Elektronik 6/2000
+
+\bibitem{Ref_Matrix2008}
+Petersen, K. B., Petersen, M. S.: \textit{"'The Matrix Cookbook"'}, http://matrixcookbook.com, Version: November 14, 2008
+
+\bibitem{Ref_Bronstein}
+Bronstein, I. N., Semendjajew, K. A.: \textit{"'Taschenbuch der Mathematik"'}, 25. Auflage, Verlag Nauka, Moskau, B.G. Teubner Verlagsgesellschaft Stuttgart, Leipzig, Verlag Harri Deutsch Thun und Frankfurt/Main, 1991
+
+\bibitem{Ref_Kalman1960}
+Kalman, R. E.: \textit{"'A New Approach to Linear Filtering and Prediction Problems"'}, Transaction of the ASME, Journal of Basic Engineering, Seiten 35-45, 1960
+
+\bibitem{Ref_GRE01}
+Grewal, M. S. und Andrews, P. A.: \textit{"'Kalman filtering: theory and practice using Matlab"'}, second edition, Wiley-Interscience Publication, New York, 2001
+
+\end{thebibliography}
+

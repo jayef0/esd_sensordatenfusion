@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Latex Vorlage für Vorträge ES
+%
+% Autor: R. Marchthaler
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,fleqn,twocolumn]{article} 
+
+% Zusatzpakete laden:
+\usepackage{enumerate,mathptmx,ngerman,graphicx,hhline,array,float,amssymb,amsmath,enumerate,ulem,fancyhdr,caption,url}
+\usepackage{subfigure,amsmath,units,savefnmark,tabularx,float,booktabs}
+%\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc} 
+
+% Inhaltsverzeichnis anpassen
+\usepackage{titletoc} 
+\dottedcontents{part}[2mm]{\large\fillast}{1mm}{0.5pc}
+
+
+\usepackage[ngerman]{varioref}
+%\usepackage{pstricks}		
+\usepackage[latin1]{inputenc}
+\usepackage{listings}														% Einbinden von Codelistings
+\usepackage{xcolor,color}												% Einbinden von Farben
+\usepackage[colorlinks=true, breaklinks=true, pdfborder={0 0 0}, pdftex, urlcolor=blue, citecolor=blue, linkcolor=blue]{hyperref} 
+
+
+% description Anpassung, damit es schöner aussieht.
+\usepackage{eqlist}
+\let\description=\eqlist
+\let\enddescription=\endeqlist
+\let\eqlistlabel\descriptionlabel
+
+
+% Layout:
+\setlength{\topmargin}{-20mm}										% Abstand Seitenkopf vom Rand (0mm entspricht einem Abstand von 25.4mm)
+\setlength{\headheight}{15mm}										% Höhe Seitenkopfs
+\setlength{\headsep}{15mm}											% Abstand Seitenkopf vom Seitenrumpf
+\setlength{\textheight}{240mm}									% Höhe Seitenrumpf 
+\setlength{\footskip}{10mm}											% Abstand unteres Ende Seitenfuss zum unteren Ende Seitenrumpf 
+\setlength{\oddsidemargin}{-9.4mm}							% Abstand ungerade Seitenzahlen vom Seitenrand 
+                                                % (0mm entspricht einem Abstand vom Rand von 25.4mm)
+\setlength{\evensidemargin}{-9.4mm} 						% Abstand ungerade Seitenzahlen vom Seitenrand
+                                                % (0mm entspricht einem Abstand vom Rand von 25.4mm)
+\setlength{\textwidth}{184mm} 									% Breite Seitenrumpf 
+
+% Erstzeileneinzug:
+\setlength{\parindent}{0.0em} 
+
+% Abstand zwischen zwei Absätzen:
+\setlength{\parskip}{6pt plus2pt minus2pt} 			% Setzt den vertikalen Abstand zwischen Absätzen auf 6 pt
+																								% Das Plus und Minus fügt Glue ein, d. h. TeX darf den Abstand um 4 Punkte
+																								% vergrößern oder verkleinern, um ein gutes Layout zu erzeugen 
+																								% (z. B. bündiger Abschluss der Seite)
+																		
+% Kopf- unf Fußzeile:
+\pagestyle{fancy}																% Seitenlayout auf eigene Kopf- und Kopfzeilen ändern
+\fancyhf{}													  					% Kopf- und Fußzeile löschen
+\renewcommand{\headrulewidth}{0.1pt}						% Srichstärke der Line unterhalb der Kopfzeile
+\renewcommand{\footrulewidth}{0.1pt}						% Srichstärke der Line oberhalb der Fußzeile
+\rhead{\includegraphics[width=4cm]{HE_Logo.pdf}}% Logo in der Kofzeile rechts platzieren
+\cfoot{\footnotesize{- \thepage -}}             % Seitenzahl in der Fußzeile mittig platzieren
+
+% neu Defintion von Kopf- und Fu0zeilen einer leeren Seite (Titelseite, Inhaltsverzeichnis, etc.)
+\fancypagestyle{plain}{
+   \fancyhf{}
+   \fancyhead[C]{} 											% alles ausblenden
+   \renewcommand{\headrulewidth}{0.0pt} % Line unterhalb der Kopfzeile ausblenden
+   \renewcommand{\footrulewidth}{0.1pt}	% Srichstärke der Line oberhalb der Fußzeile
+   \cfoot{\footnotesize{- \thepage -}}             % Seitenzahl in der Fußzeile mittig platzieren
+}	
+
+																				
+\sloppy
+
+%-----------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\title{\Huge{Vortragsreihe\\[5mm] Embedded Systems Design\\[5mm]}}
+\author{\Large{TIB6}}
+\date{Sommersemester 2019}
+\maketitle
+
+\clearpage
+\tableofcontents
+
+\cleardoublepage
+\input{Name_JFBR/Sensordatenfusion}
+
+\end{document}
+%-----------------------------------------------------------------------------------------------------------------------

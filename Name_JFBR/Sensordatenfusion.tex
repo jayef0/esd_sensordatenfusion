@@ -4,7 +4,7 @@
 
 \part{Sensordatenfusion}
 \begin{center}
-Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ email: janfabian.fabriczek@stud.hs-esslingen.de \\[1cm] 01. April 2019 \\[1cm]
+Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ E-Mail: janfabian.fabriczek@stud.hs-esslingen.de \\[1cm] 01. April 2019 \\[1cm]
 \end{center}
 
 
@@ -14,9 +14,11 @@ Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ email: 
 \section*{Einleitung}
 \label{Kap_Einleitung}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu quam id lacus mattis iaculis. Vestibulum eros sem, posuere a volutpat vitae, aliquet eget ligula. Suspendisse eget neque vulputate, ornare nisl et, pharetra enim. Pellentesque lorem enim, fermentum eu ornare eget, pellentesque in augue. Ut id placerat nunc. Proin iaculis eget lacus commodo luctus. Aliquam erat volutpat. Sed sollicitudin placerat enim. Nunc cursus et sapien at semper. Donec ac est nisl. Maecenas pharetra vestibulum augue, facilisis tempor neque finibus ornare. Phasellus mollis ac felis ut volutpat. Quisque auctor rhoncus ex, vel tincidunt lacus placerat sit amet.
+Das autonome Fahren hat für die Automobilbranche einen hohen Stellenwert. Ein Computer steuert das Auto ohne menschlichen Einfluss. Damit der Computer im Auto genau weiß wie, wann und wo es fahren kann und muss, muss es die Umgebung wahrnehmen können.
 
-Aenean sed commodo ipsum, in dictum quam. In rutrum metus ut nisi maximus ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vehicula dictum sem pulvinar eleifend. In quis mattis tortor, non auctor libero. Aenean tincidunt blandit urna, quis tristique lectus placerat quis. Nunc vel turpis ac sem imperdiet facilisis. Nunc semper consequat dui, non rhoncus orci lobortis vitae. Ut lobortis eget magna sed ultricies. Proin arcu turpis, accumsan a elementum quis, dapibus eu ligula.
+Um die Umgebung wahrnehmen zu können, werden Sensoren am Auto verwendet. In der Außenwelt gibt es viele verschiedene Wetterbedingungen, die die Sensoren so stark beeinflussen können, dass sie ihren Zweck nicht mehr erfüllen können. Der Einsatz mehrerer Sensoren mit unterschiedlichen Wahrnehmungsverfahren hilft, die Blindheit des Autos abzuwehren und somit auch die Sicherheit neben der Funktionsfähigkeit zu erhalten.
+
+Der Einsatz von mehreren Sensoren erfordert allerdings, dass die Messdaten zusammengefasst werden und dadurch ein komplettes Abbild der Umgebung entsteht. Unter dem Begriff \textit{Sensordatenfusion} wird das Zusammenführen der Sensordaten verstanden.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,81 +26,94 @@ Aenean sed commodo ipsum, in dictum quam. In rutrum metus ut nisi maximus ultric
 %\newpage
 \section*{Funktionsweise}
 
-Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. Donec turpis quam, maximus et vulputate convallis, suscipit quis magna. Cras vel enim egestas, molestie nulla at, commodo diam. Sed quis posuere sem, sit amet bibendum odio. Mauris consequat ligula eget pharetra elementum. Phasellus fringilla dui sollicitudin tempor aliquam. Nulla facilisi.
+\subsection*{Aufbau}
 
-Fusce accumsan sollicitudin est sit amet ornare. Phasellus bibendum neque sit amet nunc consectetur dapibus. Sed euismod, lorem vitae porta vulputate, arcu magna aliquet sem, sed pharetra mi justo sed quam. Quisque ullamcorper eget nulla ut fermentum. Proin venenatis feugiat urna. In hac habitasse platea dictumst. Nullam et massa sit amet arcu consequat mattis ut id metus.
+\subsubsection*{Allgemein}
 
-Proin vel convallis erat, ac finibus ex. Pellentesque cursus gravida elit. In pharetra arcu lectus, in aliquet ligula bibendum vitae. Integer sem lacus, molestie a elit id, interdum vestibulum leo. Phasellus augue nunc, mollis at gravida id, malesuada a massa. Fusce erat urna, ullamcorper ut odio non, lacinia tempus nisl. Maecenas efficitur justo quis libero imperdiet, quis porttitor enim placerat.
-
-Ut dignissim purus erat, non semper sapien ornare sit amet. Nunc ut ligula ipsum. Nullam vehicula diam sed velit ornare, non auctor nibh sodales. Integer vehicula, elit posuere laoreet mollis, lacus elit convallis odio, et viverra neque eros ac eros. Ut a enim ligula. Aliquam aliquet dolor sit amet nisi commodo, sit amet viverra purus tristique. Curabitur elit libero, vehicula ut nibh et, maximus sagittis turpis. Aliquam erat volutpat. Donec ornare eros non eros fringilla, at rhoncus velit sodales. Nulla facilisi. Curabitur vitae felis non justo dignissim accumsan ut vel leo. Cras quis elit porttitor massa rhoncus mattis vitae ut augue.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-\section*{Fusionstypen}
-
-Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi volutpat orci a odio scelerisque ultricies. Nunc aliquet, elit quis mollis egestas, tellus urna pellentesque quam, eget ornare ligula urna in lorem. Nullam ac dui elementum, consequat odio at, blandit felis. Quisque blandit sed ligula in hendrerit. In maximus, tellus sed lacinia accumsan, dui purus dignissim justo, ut pulvinar massa ligula sit amet massa. Vestibulum sed commodo lorem, vitae ornare ligula. Nulla pretium quam vel leo efficitur iaculis. Curabitur nisi ante, venenatis vel interdum at, molestie at lorem. Donec hendrerit dui sed commodo facilisis.
-
-\subsection*{Across Sensors - Data Fusion}
-
-Nunc pellentesque lacinia metus vehicula auctor. In congue purus diam, vel sollicitudin sapien maximus vehicula. Maecenas dui magna, feugiat vitae sem id, placerat consequat tortor. Mauris consectetur mollis mauris, at vehicula tortor aliquam tincidunt. Nunc ut purus eu magna fringilla facilisis. Integer mi lectus, aliquam consectetur tortor id, suscipit finibus quam. Etiam eget risus ornare, accumsan quam eu, semper justo. Vestibulum efficitur lectus arcu. Sed eu augue sodales, varius nibh et, lobortis mauris. Sed eu metus id diam congue laoreet nec ac diam. Pellentesque a est ut quam tempus dignissim condimentum at mauris. Curabitur nec fringilla nibh. Phasellus varius vitae augue sed varius.
-
-\subsection*{Across Attributes - Feature Fusion}
-
-Ut vehicula ultricies maximus. Morbi lacus quam, tincidunt at interdum in, aliquet tempus sem. In maximus eleifend nunc, eu congue ligula pellentesque in. Vivamus euismod metus vitae neque volutpat pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent dictum mauris non ultrices commodo. Vivamus varius ex dui, in pretium ipsum convallis a. Proin eleifend feugiat ex. Maecenas id vestibulum lorem. Fusce sed porta felis, ac vehicula diam. Sed tincidunt urna a lorem facilisis facilisis.
-
-\subsection*{Across Domains - Decision Fusion}
-
-Donec venenatis eleifend turpis in mollis. Praesent id mi quis justo feugiat viverra. Sed pellentesque, sapien id iaculis feugiat, ipsum lacus laoreet eros, eget congue urna arcu ac lorem. Cras consectetur nisi viverra, tincidunt dui eleifend, blandit massa. Proin lobortis nisl urna, non rhoncus orci lacinia a. Aenean efficitur imperdiet arcu, porttitor porta justo convallis sit amet. Maecenas malesuada vel lectus dignissim aliquet. Pellentesque sollicitudin, eros eget scelerisque accumsan, nibh ex iaculis sapien, in hendrerit eros urna ut risus. Nullam sed lorem at odio volutpat finibus id vitae nunc. Donec turpis felis, vehicula vel leo at, feugiat lacinia lacus. Vivamus a mauris orci.
-
-\subsection*{Across Time}
-
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-\section*{Sensorkonfigurationen}
-
-\subsection*{Redundant und kompetitiv}
-
-Ut sed convallis nulla. Sed id mauris lorem. Phasellus sodales, ante ut dictum congue, tortor elit sodales felis, in elementum leo lectus et enim. Integer faucibus sagittis neque, quis vestibulum odio maximus ut. Nullam non nulla quis odio commodo accumsan eget eget tortor. Ut luctus porta sem. Nam nec rhoncus ligula. Fusce rutrum consequat erat, quis congue ligula porta sit amet. Fusce ultrices eros non quam elementum, nec accumsan ex euismod. Sed convallis purus ac aliquet pellentesque.
-
-\subsection*{Komplementär}
-
-Pellentesque eget turpis quam. Integer varius ante id felis tincidunt, in pharetra lorem laoreet. Curabitur euismod nibh nec nulla maximus, et eleifend quam accumsan. Curabitur blandit pretium enim, quis semper neque consequat et. Donec sollicitudin bibendum neque vitae finibus. Vivamus nec nisi fermentum, tempor ex facilisis, fermentum felis.
-
-\subsection*{Kooperativ}
-
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
-
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-\section*{Vorteile}
-
-Praesent porttitor lacus in convallis mattis. Pellentesque efficitur nisl vel mi congue tincidunt. In eu libero tempor, ultricies leo vel, ornare quam. Donec et magna tristique, vulputate purus ut, ultricies ante. Morbi sit amet nunc viverra eros luctus elementum. Aenean mauris augue, laoreet eget varius ornare, scelerisque vitae metus.
-
-Suspendisse porttitor elementum lorem, non dapibus tellus pellentesque at. In imperdiet odio nisl, volutpat auctor dui fringilla a. Maecenas laoreet pulvinar nibh ut vestibulum. Integer ornare, risus in fermentum ultrices, est erat imperdiet augue, a porttitor elit mi vitae magna. Curabitur id enim dui. Integer eget vestibulum lectus. Duis facilisis sagittis lorem, vel egestas mi tempus quis.
-
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
-
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-\section*{Nachteile}
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. Donec turpis
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
- \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/Zustandsraum_diskret.jpg}}
+ \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/aufbau_allgemein.png}}
+ \caption {Condimentum laoreet, lacus nisl pretium}
+ \label{Abb_Zustandsraum} 
+\end{figure}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+\subsubsection*{Sensoren}
+
+Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch unterschiedlicher Sensoren in einem Netzwerk verstanden.
+
+Die Sensornetzwerke werden zwischen zwei Typen unterschieden. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen. In einem heterogenen Sensornetzwerk
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\subsection*{Fusionstyp}
+
+Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
+
+\subsubsection*{Across Sensors - Data Fusion}
+
+Nunc pellentesque lacinia metus vehicula auctor. In congue purus diam, vel sollicitudin sapien 
+
+\subsubsection*{Across Attributes - Feature Fusion}
+
+Ut vehicula ultricies maximus. Morbi lacus quam, tincidunt at interdum in, aliquet tempus sem. 
+
+\subsubsection*{Across Domains - Decision Fusion}
+
+Donec venenatis eleifend turpis in mollis. Praesent id mi quis justo feugiat viverra. Sed 
+
+\subsubsection*{Across Time}
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\subsection*{Methodik}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Sensorkonfiguration}
+
+Bei der Fusion wird zwischen verschiedenen Typen unterschieden.
+
+\begin{itemize}
+\item Redundante oder kompetitive Fusion
+\item Komplementäre Fusion
+\item Kooperative Fusion
+\item Unabhängige Fusion
+\end{itemize}
+
+\subsection*{Redundant und kompetitiv}
+
+Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind.
+
+Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich.
+
+Das Ziel dieses Fusionstypen ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
+
+
+\subsection*{Komplementär}
+
+Pellentesque eget turpis quam. Integer varius ante id felis tincidunt, in pharetra lorem laoreet. 
+
+\subsection*{Kooperativ}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia 
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}[ht]
+ \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
  \caption {Condimentum laoreet, lacus nisl pretium}
  \label{Abb_Zustandsraum} 
 \end{figure}
@@ -107,33 +122,32 @@ Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\newpage
+\section*{Vorteile}
+
+Als erstes wird der Nachteil ausgeglichen, dass normalerweise nur ein Sensor verwendet wird. Bei der Sensordatenfusion werden mehrere Sensoren eingesetzt. Dies hat den Vorteil, dass die Schätzgenauigkeit verbessert wird. Des Weiteren wird der Gesamterfassungsbereich durch den Einsatz von mehreren Sensoren vergrößert. 
+Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht. Dadurch dürfen einzelne Sensoren auch ausfallen, ohne dass sie die Funktionsfähigkeit einschränken. Aber durch den Ausfall von Sensoren bei der Sensordatenfusion kann sich die durch die Sensordatenfusion verbesserte Schätzgenauigkeit und Robustheit wieder verschlechtern. Auch die gewonnene Robustheit des Gesamtsystems kann sich durch den Ausfall mehrere Sensoren verschlechtern, da unter Umständen Sensoren ausfallen, die unter bestimmten Umweltbedingungen besser arbeiten, als andere. Um die Ausfallsicherheit nicht zu gefährden, werden die Sensoren mit Redundanz ausgelegt. Es bedeutet, dass Sensoren, die zwingend erforderlich für die Sicherheit oder die Funktionsfähigkeit sind, mehrfach im Sensornetzwerk eingebunden werden.
+
+Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfahren verwenden, beispielsweise Radar und Laserabstandssensoren, können die unterschiedlichen Stärken der Wahrnehmungsverfahren zusammengeführt werden und verbessern die Wahrnehmung des Erfassungsbereichs. Die Nachteile einzelner Wahrnehmungsverfahren der Sensoren, die unter bestimmten Umweltbedingungen entstehen können, werden ausgeglichen, da die Wahrnehmung in solchen Fällen beispielsweise hauptsächlich durch einen oder mehrere andere Sensoren übernommen wird. Die Fähigkeit die Umgebung ausreichend zu erfassen, wird somit auch in für einzelne Sensoren schwierigen Situationen gewährleistet.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+\section*{Nachteile}
+
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
 \section*{Einsatzgebiete}
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 
 %------------------------------------------------------------------------------------------------------------------------
 \section*{Zusammenfassung}
-\subsection*{Prädiktion}
-\label{Kap_Praediktion}
-
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh gravida varius. Sed hendrerit rutrum sapien ac convallis. Integer et vestibulum quam. Pellentesque in efficitur dolor. Aliquam erat volutpat. Donec augue mi, auctor non euismod congue, tincidunt ac ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-
-%------------------------------------------------------------------------------------------------------------------------
-
-\subsection*{Korrektur}
-\label{Kap_Korrektur}
-
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia tincidunt. 
-
-\begin{enumerate}
-\item Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit.
-\item Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit.
-\end{enumerate}
-
-\vspace{5mm}
 
 Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed rutrum ipsum erat in dui. Nam hendrerit velit in dui laoreet, sed eleifend libero commodo. Vivamus pharetra lacus ac viverra hendrerit. Pellentesque dignissim tempus tempor. Nullam sit amet justo libero.
 

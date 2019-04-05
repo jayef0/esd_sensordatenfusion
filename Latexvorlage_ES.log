@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.27)  2 APR 2019 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.27)  6 APR 2019 00:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -500,7 +500,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )))
 \eql@cnt=\count131
 )
-(./Latexvorlage_ES.aux)
+(./Latexvorlage_ES.aux
+
+LaTeX Warning: Label `Abb_Zustandsraum' multiply defined.
+
+)
 \openout1 = `Latexvorlage_ES.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -518,8 +522,7 @@ LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 78.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -638,56 +641,77 @@ Package pdftex.def Info: HE_Logo.pdf  used on input line 88.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 31.
+<Name_JFBR/aufbau_allgemein.png, id=26, 454.3374pt x 225.4824pt>
+File: Name_JFBR/aufbau_allgemein.png Graphic file (type png)
+<use Name_JFBR/aufbau_allgemein.png>
+Package pdftex.def Info: Name_JFBR/aufbau_allgemein.png  used on input line 37.
+
+(pdftex.def)             Requested size: 214.64949pt x 106.52722pt.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 89.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
 File: HE_Logo.pdf Graphic file (type pdf)
 <use HE_Logo.pdf>
-Package pdftex.def Info: HE_Logo.pdf  used on input line 49.
+Package pdftex.def Info: HE_Logo.pdf  used on input line 98.
 (pdftex.def)             Requested size: 113.81102pt x 28.67134pt.
+ [3
 
-[3
-
-]
-<Name_JFBR/Zustandsraum_diskret.jpg, id=35, 746.352pt x 394.857pt>
-File: Name_JFBR/Zustandsraum_diskret.jpg Graphic file (type jpg)
-<use Name_JFBR/Zustandsraum_diskret.jpg>
-Package pdftex.def Info: Name_JFBR/Zustandsraum_diskret.jpg  used on input line
- 101.
-(pdftex.def)             Requested size: 214.64949pt x 113.55966pt.
+ <./Name_JFBR/aufbau_allgemein.png>]
+<Name_JFBR/car_sensors.jpg, id=48, 702.625pt x 467.7475pt>
+File: Name_JFBR/car_sensors.jpg Graphic file (type jpg)
+<use Name_JFBR/car_sensors.jpg>
+Package pdftex.def Info: Name_JFBR/car_sensors.jpg  used on input line 116.
+(pdftex.def)             Requested size: 214.64949pt x 142.89473pt.
 File: HE_Logo.pdf Graphic file (type pdf)
 <use HE_Logo.pdf>
-Package pdftex.def Info: HE_Logo.pdf  used on input line 112.
+Package pdftex.def Info: HE_Logo.pdf  used on input line 161.
 (pdftex.def)             Requested size: 113.81102pt x 28.67134pt.
- [4])
+ [4 <./Name_JFBR/car_sensors.jpg>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
 File: HE_Logo.pdf Graphic file (type pdf)
 <use HE_Logo.pdf>
 Package pdftex.def Info: HE_Logo.pdf  used on input line 91.
 (pdftex.def)             Requested size: 113.81102pt x 28.67134pt.
- [5 <./Name_JFBR/Zustandsraum_diskret.jpg>]
+ [5
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
- (./Latexvorlage_ES.aux)
+
+(./Latexvorlage_ES.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
 Package rerunfilecheck Info: File `Latexvorlage_ES.out' has not changed.
 (rerunfilecheck)             Checksum: B52FBED494E6DC0400EB2F21500485CE;51.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
- 10263 strings out of 492649
- 148275 string characters out of 6129622
- 252584 words of memory out of 5000000
- 13925 multiletter control sequences out of 15000+600000
- 40374 words of font info for 59 fonts, out of 8000000 for 9000
+ 10288 strings out of 492649
+ 148722 string characters out of 6129622
+ 250554 words of memory out of 5000000
+ 13943 multiletter control sequences out of 15000+600000
+ 43177 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,15n,43p,761b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,15n,43p,872b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Latexvorlage_ES.pdf (5 pages, 122307 bytes).
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Latexvorlage_ES.pdf (5 pages, 163659 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 35 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 36 named destinations out of 1000 (max. 500000)
+ 24 words of extra memory for PDF output out of 10000 (max. 10000000)
 

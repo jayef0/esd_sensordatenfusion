@@ -24,11 +24,9 @@ Der Einsatz von mehreren Sensoren erfordert allerdings, dass die Messdaten zusam
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\newpage
-\section*{Funktionsweise}
+\section*{Aufbau}
 
-\subsection*{Aufbau}
-
-\subsubsection*{Allgemein}
+\subsection*{Allgemein}
 
 Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. Donec turpis
 
@@ -40,7 +38,7 @@ Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-\subsubsection*{Sensoren}
+\subsection*{Sensoranordnung}
 
 Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch unterschiedlicher Sensoren in einem Netzwerk verstanden.
 
@@ -51,10 +49,58 @@ In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche phys
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection*{Sensorkonfiguration}
+
+Bei der Fusion wird zwischen verschiedenen Typen unterschieden. Im Folgenden werden die einzelnen Fusionstypen dargestellt.
+
+\subsubsection*{Redundante und kompetitive  Fusion}
+
+Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind.
+
+Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich.
+
+Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
+
+\subsubsection*{Komplementäre  Fusion}
+
+Bei der komplementären Fusion haben die Erfassungsbereiche der Sensoren keine Überlappungsbereiche. Dies bedeutet, dass sich der Gesamterfassungsbereich bei dieser Fusion vergrößert. Es handelt sich auch dann um eine komplementäre Fusion, wenn sich die Merkmale unterscheiden, die durch die einzelnen Sensoren wahrgenommen werden. Ein Merkmal kann beispielsweise die Breite eines Objekts sein.
+
+Die Erhöhung des Gesamterfassungsbereichs ist das Ziel dieses Fusionstypen. Das Ziel ist allerdings gefährdet, wenn einzelne Sensoren in einer komplementären Fusion ausfallen, da jeder Sensor nur einen bestimmten Erfassungsbereich oder bestimmte Merkmale wahrnimmt.
+
+\subsubsection*{Kooperative  Fusion}
+
+Eine kooperative Fusion liegt vor, wenn aus Wahrnehmungen mehrerer Sensoren ein neues Merkmal entsteht. Ein Beispiel hierfür ist die Triangulation der Position eines Objekts unter Verwendung der Beobachtung von zwei Sensoren, die die Entfernung messen.
+
+\subsubsection*{Unabhängige Fusion}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia 
+
+\subsubsection*{Kombinierte Fusion}
+
+Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jeweiligen Nachteile der verschiedenen Fusionen zu kompensieren, werden die Fusionen, redundante und kompetitive  Fusion, komplementäre  Fusion und kooperative  Fusion, miteinander kombiniert. Die unabhängige Fusion wird an dieser Stelle nicht verwendet, da sie keine Vorteile mit sich bringt.
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}[ht]
+ \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
+ \caption {Condimentum laoreet, lacus nisl pretium}
+\end{figure}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\newpage
-\subsection*{Fusionstyp}
+
+
+\section*{Funktionsweise}
+
+\subsection*{Allgemein}
 
 Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
+
+\subsection*{Fusiontyp}
+
+Fusionstypen - Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
 
 \subsubsection*{Across Sensors - Data Fusion}
 
@@ -72,52 +118,6 @@ Donec venenatis eleifend turpis in mollis. Praesent id mi quis justo feugiat viv
 
 Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-\subsection*{Methodik}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-\section*{Sensorkonfiguration}
-
-Bei der Fusion wird zwischen verschiedenen Typen unterschieden. Im Folgenden werden die einzelnen Fusionstypen dargestellt.
-
-\subsection*{Redundante und kompetitive  Fusion}
-
-Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind.
-
-Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich.
-
-Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
-
-\subsection*{Komplementäre  Fusion}
-
-Bei der komplementären Fusion haben die Erfassungsbereiche der Sensoren keine Überlappungsbereiche. Dies bedeutet, dass sich der Gesamterfassungsbereich bei dieser Fusion vergrößert. Es handelt sich auch dann um eine komplementäre Fusion, wenn sich die Merkmale unterscheiden, die durch die einzelnen Sensoren wahrgenommen werden. Ein Merkmal kann beispielsweise die Breite eines Objekts sein.
-
-Die Erhöhung des Gesamterfassungsbereichs ist das Ziel dieses Fusionstypen. Das Ziel ist allerdings gefährdet, wenn einzelne Sensoren in einer komplementären Fusion ausfallen, da jeder Sensor nur einen bestimmten Erfassungsbereich oder bestimmte Merkmale wahrnimmt.
-
-\subsection*{Kooperative  Fusion}
-
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia  
-
-\subsection*{Unabhängige Fusion}
-
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia 
-
-\subsection*{Vermischte Fusion}
-
-Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jeweiligen Nachteile der verschiedenen Fusionen zu kompensieren, werden die Fusionen, redundante und kompetitive  Fusion, komplementäre  Fusion und kooperative  Fusion, miteinander kombiniert. Die unabhängige Fusion wird an dieser Stelle nicht verwendet, da sie keine Vorteile mit sich bringt.
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\begin{figure}[ht]
- \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
- \caption {Condimentum laoreet, lacus nisl pretium}
-\end{figure}
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

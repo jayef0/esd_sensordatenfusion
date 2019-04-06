@@ -44,7 +44,9 @@ Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. 
 
 Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch unterschiedlicher Sensoren in einem Netzwerk verstanden.
 
-Die Sensornetzwerke werden zwischen zwei Typen unterschieden. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen. In einem heterogenen Sensornetzwerk
+Die Sensornetzwerke werden zwischen zwei Typen unterschieden. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen.
+
+In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -79,19 +81,12 @@ Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\newpage
+\newpage
 \section*{Sensorkonfiguration}
 
-Bei der Fusion wird zwischen verschiedenen Typen unterschieden.
+Bei der Fusion wird zwischen verschiedenen Typen unterschieden. Im Folgenden werden die einzelnen Fusionstypen dargestellt.
 
-\begin{itemize}
-\item Redundante oder kompetitive Fusion
-\item Komplementäre Fusion
-\item Kooperative Fusion
-\item Unabhängige Fusion
-\end{itemize}
-
-\subsection*{Redundant und kompetitiv}
+\subsection*{Redundante und kompetitive  Fusion}
 
 Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind.
 
@@ -99,16 +94,23 @@ Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich dur
 
 Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
 
+\subsection*{Komplementäre  Fusion}
 
-\subsection*{Komplementär}
+Bei der komplementären Fusion haben die Erfassungsbereiche der Sensoren keine Überlappungsbereiche. Dies bedeutet, dass sich der Gesamterfassungsbereich bei dieser Fusion vergrößert. Es handelt sich auch dann um eine komplementäre Fusion, wenn sich die Merkmale unterscheiden, die durch die einzelnen Sensoren wahrgenommen werden. Ein Merkmal kann beispielsweise die Breite eines Objekts sein.
 
-Pellentesque eget turpis quam. Integer varius ante id felis tincidunt, in pharetra lorem laoreet. 
+Die Erhöhung des Gesamterfassungsbereichs ist das Ziel dieses Fusionstypen. Das Ziel ist allerdings gefährdet, wenn einzelne Sensoren in einer komplementären Fusion ausfallen, da jeder Sensor nur einen bestimmten Erfassungsbereich oder bestimmte Merkmale wahrnimmt.
 
-\subsection*{Kooperativ}
+\subsection*{Kooperative  Fusion}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia  
+
+\subsection*{Unabhängige Fusion}
 
 Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia 
 
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+\subsection*{Vermischte Fusion}
+
+Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
@@ -127,6 +129,9 @@ Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht. Dadur
 
 Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfahren verwenden, beispielsweise Radar und Laserabstandssensoren, können die unterschiedlichen Stärken der Wahrnehmungsverfahren zusammengeführt werden und verbessern die Wahrnehmung des Erfassungsbereichs. Die Nachteile einzelner Wahrnehmungsverfahren der Sensoren, die unter bestimmten Umweltbedingungen entstehen können, werden ausgeglichen, da die Wahrnehmung in solchen Fällen beispielsweise hauptsächlich durch einen oder mehrere andere Sensoren übernommen wird. Die Fähigkeit die Umgebung ausreichend zu erfassen, wird somit auch in für einzelne Sensoren schwierigen Situationen gewährleistet.
 
+Durch die Verwendung mehrerer Sensoren, die nach unterschiedlichen Wahrnehmungsverfahren arbeiten, können mehr Informationen der Umgebung erfasst werden.
+
+Die Sensordatenfusion hat ebenfalls den Vorteil, dass günstigere Sensoren verwendet werden können. Ohne die Sensordatenfusion müssen Sensoren verwendet werden, dessen Einschränkungen nicht problematisch für den eingesetzten Zweck sind. In diesen Fällen sind die Sensoren, die dann aber benötigt werden sehr teuer. Wenn mehrere einzelne Sensoren verwendet werden, können die Sensoren unter Berücksichtigung des physikalischen Prinzips zur Wahrnehmung so gewählt werden, dass Einschränkungen einzelner Sensoren durch andere Sensoren im System ausgeglichen werden können.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -135,7 +140,7 @@ Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfah
 
 Umso mehr Sensoren verwendet werden sollen, desto schwieriger wird die Integration der Sensoren. Gründe hierfür sind der erhöhte Aufwand für die Verkabelung, der weitere notwendige Platz für die Sensoren, sowie die Versorgung der Sensoren mit Strom. Aus dem erhöhten Aufwand für die Verkabelung resultieren direkt steigende Kosten für die Verkabelung, um alle verbauten Sensoren einzubinden.
 
-Mit der Anzahl der Sensoren steigen ebenfalls die Datenmengen der Sensoren, die über die Kommunikationssysteme übertragen werden. In einigen Situationen wird versucht die Datentransferraten im Kommunikationssystem zu erhöhen, damit die größere Datenmenge *. 
+Mit der Anzahl der Sensoren steigen ebenfalls die Datenmengen der Sensoren, die über die Kommunikationssysteme übertragen werden. In einigen Situationen wird versucht die Datentransferraten im Kommunikationssystem zu erhöhen, damit die größere Datenmenge nicht für eine erhebliche Erhöhung der benötigten Zeit zur Übertragung der Daten an das Verarbeitungssystem. 
 
 Können die Datentransferraten nicht so stark erhöht werden, sodass der Mehraufwand für den Transfer der zusätzlichen Datenmengen ausgeglichen werden kann, entsteht ein deutlich erhöhter Zeitbedarf für die Übertragung der Daten der Sensoren zum Verarbeitungsziel.
 
@@ -147,7 +152,16 @@ Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auc
 
 %\newpage
 \section*{Einsatzgebiete}
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+
+Die Sensordatenfusion wird in vielen Bereichen eingesetzt. Vor allem in den Bereichen des autonomen Fahrens und des autonomen Fliegens hat es eine hohe Bedeutung. In diesen beiden Bereichen werden hohe und auch sicherheitskritische Anforderungen an die maschinelle Erfassung der Umgebung gestellt. Die Anforderungen gestatten die Verwendung eines einzelnen Sensors nicht mehr.
+
+Im Folgenden werden drei Einsatzgebiete im Detail betrachtet.
+
+\subsection*{Objekterkennung}
+
+\subsection*{Positionsermittlung}
+
+\subsection*{Fahrerassistenzsysteme}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage

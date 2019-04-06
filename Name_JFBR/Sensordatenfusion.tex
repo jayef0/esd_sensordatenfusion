@@ -36,7 +36,6 @@ Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. 
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/aufbau_allgemein.png}}
  \caption {Condimentum laoreet, lacus nisl pretium}
- \label{Abb_Zustandsraum} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -98,7 +97,7 @@ Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Dat
 
 Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich.
 
-Das Ziel dieses Fusionstypen ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
+Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
 
 
 \subsection*{Komplementär}
@@ -115,7 +114,6 @@ Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet 
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
  \caption {Condimentum laoreet, lacus nisl pretium}
- \label{Abb_Zustandsraum} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -135,7 +133,15 @@ Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfah
 %\newpage
 \section*{Nachteile}
 
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+Umso mehr Sensoren verwendet werden sollen, desto schwieriger wird die Integration der Sensoren. Gründe hierfür sind der erhöhte Aufwand für die Verkabelung, der weitere notwendige Platz für die Sensoren, sowie die Versorgung der Sensoren mit Strom. Aus dem erhöhten Aufwand für die Verkabelung resultieren direkt steigende Kosten für die Verkabelung, um alle verbauten Sensoren einzubinden.
+
+Mit der Anzahl der Sensoren steigen ebenfalls die Datenmengen der Sensoren, die über die Kommunikationssysteme übertragen werden. In einigen Situationen wird versucht die Datentransferraten im Kommunikationssystem zu erhöhen, damit die größere Datenmenge *. 
+
+Können die Datentransferraten nicht so stark erhöht werden, sodass der Mehraufwand für den Transfer der zusätzlichen Datenmengen ausgeglichen werden kann, entsteht ein deutlich erhöhter Zeitbedarf für die Übertragung der Daten der Sensoren zum Verarbeitungsziel.
+
+Umso mehr Daten entstehen und genutzt werden sollen, desto größer wird der Verarbeitungsaufwand. Der größere Verarbeitungsaufwand macht sich bemerkbar durch eine erhöhte Auslastung der Verarbeitungssysteme. Die erhöhte Auslastung kann dann, wenn nicht genügend Rechenleistung verfügbar ist, zu erheblich erhöhten Zeitverzögerungen führen.
+
+Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auch die Abtastzeiten gegebenenfalls unterscheiden, muss das Verarbeitungssystem einen erheblichen zusätzlichen Aufwand betreiben, um die Daten der einzelnen unterschiedlichen Sensoren synchronisieren.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

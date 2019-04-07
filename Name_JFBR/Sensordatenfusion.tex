@@ -45,7 +45,7 @@ Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch untersch
 
 Die Sensornetzwerke werden zwischen zwei Typen unterschieden. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen.
 
-In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen 
+In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen einzelner Sensoren.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,13 +97,11 @@ Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jew
 
 \subsection*{Allgemein}
 
+Die Fusion wird von einem Verarbeitungssystem unter der Verwendung von Algorithmen und mathematischen Verfahren durchgeführt. Bei der Fusion werden die Daten der einzelnen Sensoren synchronisiert, mehrere Eigenschaften zu neuen Eigenschaften zusammengefügt und einzelne Erfassungsbereiche zu einem größeren Erfassungsbereich zusammengefügt.
 
+\subsection*{Fusionsverfahren}
 
-Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
-
-\subsection*{Fusiontyp}
-
-Fusionstypen - Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
+Die unterschiedlichen Fusionsverfahren werden im Folgenden im Detail betrachtet.
 
 \subsubsection*{Fusion über Sensoren}
 
@@ -111,15 +109,15 @@ Die Fusion über Sensoren hinweg ist das Zusammenführen der Signale der einzelnen
 
 \subsubsection*{Fusion über Eigenschaften}
 
-Bei der Fusion über Eigenschaften werden einzelne EIgenschaften, die durch Sensoren erfasst wurden, wie beispielsweise die Temperatur, der Druck und die Feuchtigkeit zusammengeführt, um aus den einzelnen Eigenschaften eine neue Eigenschaft zu ermitteln, wie beispielsweise in diesem Fall den Luftbrechungsindex zu ermitteln.
+Bei der Fusion über Eigenschaften werden einzelne Eigenschaften, die durch Sensoren erfasst wurden, wie beispielsweise die Temperatur, der Druck und die Feuchtigkeit zusammengeführt, um aus den einzelnen Eigenschaften eine neue Eigenschaft zu ermitteln, wie beispielsweise in diesem Fall den Luftbrechungsindex zu ermitteln.
 
-\subsubsection*{Across Domains - Decision Fusion}
+\subsubsection*{Fusion über Bereiche}
 
-Donec venenatis eleifend turpis in mollis. Praesent id mi quis justo feugiat viverra. Sed 
+Bei der Fusion über Bereiche erfassen mehrere Sensoren die gleiche Eigenschaft, aber in unterschiedlichen räumlichen Bereichen. Die Messdaten der Sensoren werden zu einem Abbild fusioniert. Durch diese Fusion wird der Gesamtbereich der erfassten Eigenschaft vergrößert.
 
-\subsubsection*{Across Time}
+\subsubsection*{Fusion über Zeit}
 
-Donec mi eros, laoreet sit amet libero eget, laoreet tempus eros. Nulla aliquet nulla nec nibh 
+Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Messdaten kombiniert. Ältere Daten können ältere Messdaten oder auch Daten von der Kalibrierung sein.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

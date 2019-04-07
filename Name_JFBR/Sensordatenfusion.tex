@@ -54,27 +54,27 @@ In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche phys
 
 Bei der Fusion wird zwischen verschiedenen Typen unterschieden. Im Folgenden werden die einzelnen Fusionstypen dargestellt.
 
-\subsubsection*{Redundante und kompetitive  Fusion}
+\subsubsection*{Redundante und kompetitive Fusion}
 
-Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind.
+Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind \cite{Ref_StuekerHomogeneSDF}.
 
-Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich.
+Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich \cite{Ref_StuekerHomogeneSDF}.
 
-Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen. 
+Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit \cite{Ref_StuekerHomogeneSDF}. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen \cite{Ref_StuekerHomogeneSDF}. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen \cite{Ref_StuekerHomogeneSDF}.
 
-\subsubsection*{Komplementäre  Fusion}
+\subsubsection*{Komplementäre Fusion}
 
-Bei der komplementären Fusion haben die Erfassungsbereiche der Sensoren keine Überlappungsbereiche. Dies bedeutet, dass sich der Gesamterfassungsbereich bei dieser Fusion vergrößert. Es handelt sich auch dann um eine komplementäre Fusion, wenn sich die Merkmale unterscheiden, die durch die einzelnen Sensoren wahrgenommen werden. Ein Merkmal kann beispielsweise die Breite eines Objekts sein.
+Bei der komplementären Fusion haben die Erfassungsbereiche der Sensoren keine Überlappungsbereiche \cite{Ref_StuekerHomogeneSDF}. Dies bedeutet, dass sich der Gesamterfassungsbereich bei dieser Fusion vergrößert \cite{Ref_StuekerHomogeneSDF}. Es handelt sich auch dann um eine komplementäre Fusion, wenn sich die Merkmale unterscheiden, die durch die einzelnen Sensoren wahrgenommen werden \cite{Ref_StuekerHomogeneSDF}. Ein Merkmal kann beispielsweise die Breite eines Objekts sein \cite{Ref_StuekerHomogeneSDF}.
 
-Die Erhöhung des Gesamterfassungsbereichs ist das Ziel dieses Fusionstypen. Das Ziel ist allerdings gefährdet, wenn einzelne Sensoren in einer komplementären Fusion ausfallen, da jeder Sensor nur einen bestimmten Erfassungsbereich oder bestimmte Merkmale wahrnimmt.
+Die Erhöhung des Gesamterfassungsbereichs ist das Ziel dieses Fusionstypen \cite{Ref_StuekerHomogeneSDF}. Das Ziel ist allerdings gefährdet, wenn einzelne Sensoren in einer komplementären Fusion ausfallen, da jeder Sensor nur einen bestimmten Erfassungsbereich oder bestimmte Merkmale wahrnimmt \cite{Ref_StuekerHomogeneSDF}.
 
-\subsubsection*{Kooperative  Fusion}
+\subsubsection*{Kooperative Fusion}
 
-Eine kooperative Fusion liegt vor, wenn aus Wahrnehmungen mehrerer Sensoren ein neues Merkmal entsteht. Ein Beispiel hierfür ist die Triangulation der Position eines Objekts unter Verwendung der Beobachtung von zwei Sensoren, die die Entfernung messen.
+Eine kooperative Fusion liegt vor, wenn aus Wahrnehmungen mehrerer Sensoren ein neues Merkmal entsteht \cite{Ref_StuekerHomogeneSDF}. Ein Beispiel hierfür ist die Triangulation der Position eines Objekts unter Verwendung der Beobachtung von zwei Sensoren, die die Entfernung messen \cite{Ref_StuekerHomogeneSDF}.
 
 \subsubsection*{Unabhängige Fusion}
 
-Bei der unabhängigen Fusion werden die Messdaten von mehreren Sensoren verarbeitet, allerdings werden die Daten, die verarbeitet wurden, nicht zusammengefügt. Die Daten werden von dem Verarbeitungssystem separat verarbeitet. Die unabhängige Fusion ist ein Spezialfall der Sensordatenfusion.
+Bei der unabhängigen Fusion werden die Messdaten von mehreren Sensoren verarbeitet, allerdings werden die Daten, die verarbeitet wurden, nicht zusammengefügt \cite{Ref_WikiSDF}. Die Daten werden von dem Verarbeitungssystem jeweils separat verarbeitet \cite{Ref_WikiSDF}. Die unabhängige Fusion ist ein Spezialfall der Sensordatenfusion \cite{Ref_WikiSDF}.
 
 \subsubsection*{Kombinierte Fusion}
 
@@ -105,20 +105,19 @@ Die unterschiedlichen Fusionsverfahren werden im Folgenden im Detail betrachtet.
 
 \subsubsection*{Fusion über Sensoren}
 
-Die Fusion über Sensoren hinweg ist das Zusammenführen der Signale der einzelnen Sensoren, die das Gleiche messen. Ein Beispiel hierfür ist das Messen der Temperatur. Das Zusammenführen der Messsignale findet somit noch vor den eigentlichen Schritten der Signalverarbeitung statt.
+Die Fusion über Sensoren hinweg ist das Zusammenführen der Signale der einzelnen Sensoren, die das Gleiche messen \cite{Ref_KochMSDF}. Ein Beispiel hierfür ist das Messen der Temperatur \cite{Ref_KochMSDF}. Das Zusammenführen der Messsignale findet somit noch vor den eigentlichen Schritten der Signalverarbeitung statt \cite{Ref_KochMSDF}.
 
 \subsubsection*{Fusion über Eigenschaften}
 
-Bei der Fusion über Eigenschaften werden einzelne Eigenschaften, die durch Sensoren erfasst wurden, wie beispielsweise die Temperatur, der Druck und die Feuchtigkeit zusammengeführt, um aus den einzelnen Eigenschaften eine neue Eigenschaft zu ermitteln, wie beispielsweise in diesem Fall den Luftbrechungsindex zu ermitteln.
+Bei der Fusion über Eigenschaften werden einzelne Eigenschaften, die durch Sensoren erfasst wurden, wie beispielsweise die Temperatur, der Druck und die Feuchtigkeit zusammengeführt, um aus den einzelnen Eigenschaften eine neue Eigenschaft zu ermitteln, wie beispielsweise in diesem Fall den Luftbrechungsindex zu ermitteln \cite{Ref_KochMSDF}.
 
 \subsubsection*{Fusion über Bereiche}
 
-Bei der Fusion über Bereiche erfassen mehrere Sensoren die gleiche Eigenschaft, aber in unterschiedlichen räumlichen Bereichen. Die Messdaten der Sensoren werden zu einem Abbild fusioniert. Durch diese Fusion wird der Gesamtbereich der erfassten Eigenschaft vergrößert.
+Bei der Fusion über Bereiche erfassen mehrere Sensoren die gleiche Eigenschaft, aber in unterschiedlichen räumlichen Bereichen \cite{Ref_KochMSDF}. Die Messdaten der Sensoren werden zu einem Abbild fusioniert. Durch diese Fusion wird der Gesamtbereich der erfassten Eigenschaft vergrößert \cite{Ref_KochMSDF}.
 
 \subsubsection*{Fusion über Zeit}
 
-Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Messdaten kombiniert. Ältere Daten können ältere Messdaten oder auch Daten von der Kalibrierung sein.
-
+Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Messdaten kombiniert \cite{Ref_KochMSDF}. Ältere Daten können ältere Messdaten oder auch Daten von der Kalibrierung sein \cite{Ref_KochMSDF}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -176,23 +175,22 @@ Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed r
 
 \begin{thebibliography}{}
 
-\bibitem{Ref_PGN07}
-Wikipedia, Online Nachschlagewerk: \textit{"'Primary Guidance, Navigation and Control System"'},\\  \href{http://de.wikipedia.org/wiki/Primary\_Guidance\%2C\_Navigation\_and\_Control\_System}{http://de.wikipedia.org/wiki/Primary\_Guidance\\\%2C\_Navigation \_and\_Control\_System}, Okt. 2007
 
-\bibitem{Ref_WEN00}
-Wenzel, L.: \textit{"'Kalman-Filter - Ein mathematisches Modell zur Auswertung von Messdaten für Regelungstechnik, Teil 1"'}, Elektronik 6/2000
+\bibitem{Ref_KochMSDF}
+Koch, W.: \textit{"'Multi-Sensor Data Fusion - An Introduction"'}, xyz
 
-\bibitem{Ref_Matrix2008}
-Petersen, K. B., Petersen, M. S.: \textit{"'The Matrix Cookbook"'}, http://matrixcookbook.com, Version: November 14, 2008
+\bibitem{Ref_StuekerHomogeneSDF}
+Stüker, D.: \textit{"'Heterogene Sensordatenfusion zur robusten Objektverfolgung im automobilen Straßenverkehr "'}, xyz
 
-\bibitem{Ref_Bronstein}
-Bronstein, I. N., Semendjajew, K. A.: \textit{"'Taschenbuch der Mathematik"'}, 25. Auflage, Verlag Nauka, Moskau, B.G. Teubner Verlagsgesellschaft Stuttgart, Leipzig, Verlag Harri Deutsch Thun und Frankfurt/Main, 1991
+\bibitem{Ref_WikiSDF}
+Wikipedia, Online Nachschlagewerk: \textit{"'Sensordatenfusion"'}, xyz
 
-\bibitem{Ref_Kalman1960}
-Kalman, R. E.: \textit{"'A New Approach to Linear Filtering and Prediction Problems"'}, Transaction of the ASME, Journal of Basic Engineering, Seiten 35-45, 1960
+\bibitem{Ref_UniSiegenSensor}
+Universität-GH Siegen, Zentrum fu?r Sensorsysteme: \textit{"'Sensordatenfusion mit Kalman-Filtern Optimale Informationsverarbeitung"'}, xyz
 
-\bibitem{Ref_GRE01}
-Grewal, M. S. und Andrews, P. A.: \textit{"'Kalman filtering: theory and practice using Matlab"'}, second edition, Wiley-Interscience Publication, New York, 2001
+\bibitem{Ref_SDFquadrocopter}
+Lange, S.: \textit{"'Faktorgraph-basierte Sensordatenfusion zur Anwendung auf einem Quadrocopter"'}, xyz
+
 
 \end{thebibliography}
 

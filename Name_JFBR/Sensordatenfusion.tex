@@ -28,15 +28,16 @@ Der Einsatz von mehreren Sensoren erfordert allerdings, dass die Messdaten zusam
 
 \subsection*{Allgemein}
 
-Quisque sed luctus orci. Nam sodales massa ante, eget lacinia sapien mattis eu. Donec turpis
+Die einzelnen Sensoren sind über eine Verbindung mit dem Verarbeitungssystem verbunden. Das Verarbeitungssystem fusioniert die Daten der einzelnen Sensoren. Die Anwendungen greifen auf das Verarbeitungssystem zu, um die fusionierten Daten verwenden zu können. Die zugreifende Anwendung kann basierend auf den vorhandenen Daten Entscheidungen treffen. In Abbildung x ist der Aufbau eines Systems zur Sensordatenfusion dargestellt.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/aufbau_allgemein.png}}
- \caption {Condimentum laoreet, lacus nisl pretium}
+ \caption {Aufbau eines Systems zur Sensordatenfusion}
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Die Sensoren werden für die Sensordatenfusion nach einer bestimmten Strategie gewählt. Die einzelnen Strategien werden im Folgenden behandelt.
 
 \subsection*{Sensoranordnung}
 
@@ -73,7 +74,7 @@ Eine kooperative Fusion liegt vor, wenn aus Wahrnehmungen mehrerer Sensoren ein 
 
 \subsubsection*{Unabhängige Fusion}
 
-Aenean mollis tortor malesuada metus tincidunt tempor. Quisque quis orci nec quam lacinia 
+Bei der unabhängigen Fusion werden die Messdaten von mehreren Sensoren verarbeitet, allerdings werden die Daten, die verarbeitet wurden, nicht zusammengefügt. Die Daten werden von dem Verarbeitungssystem separat verarbeitet. Die unabhängige Fusion ist ein Spezialfall der Sensordatenfusion.
 
 \subsubsection*{Kombinierte Fusion}
 
@@ -82,7 +83,7 @@ Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jew
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
- \caption {Condimentum laoreet, lacus nisl pretium}
+ \caption {Sensorkonfiguration: Kombinierte Fusion am Auto}
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -96,19 +97,21 @@ Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jew
 
 \subsection*{Allgemein}
 
+
+
 Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
 
 \subsection*{Fusiontyp}
 
 Fusionstypen - Nullam eu fringilla libero, vel tristique enim. Quisque efficitur ut nunc vel facilisis. Morbi 
 
-\subsubsection*{Across Sensors - Data Fusion}
+\subsubsection*{Fusion über Sensoren}
 
-Nunc pellentesque lacinia metus vehicula auctor. In congue purus diam, vel sollicitudin sapien 
+Die Fusion über Sensoren hinweg ist das Zusammenführen der Signale der einzelnen Sensoren, die das Gleiche messen. Ein Beispiel hierfür ist das Messen der Temperatur. Das Zusammenführen der Messsignale findet somit noch vor den eigentlichen Schritten der Signalverarbeitung statt.
 
-\subsubsection*{Across Attributes - Feature Fusion}
+\subsubsection*{Fusion über Eigenschaften}
 
-Ut vehicula ultricies maximus. Morbi lacus quam, tincidunt at interdum in, aliquet tempus sem. 
+Bei der Fusion über Eigenschaften werden einzelne EIgenschaften, die durch Sensoren erfasst wurden, wie beispielsweise die Temperatur, der Druck und die Feuchtigkeit zusammengeführt, um aus den einzelnen Eigenschaften eine neue Eigenschaft zu ermitteln, wie beispielsweise in diesem Fall den Luftbrechungsindex zu ermitteln.
 
 \subsubsection*{Across Domains - Decision Fusion}
 
@@ -146,7 +149,7 @@ Können die Datentransferraten nicht so stark erhöht werden, sodass der Mehraufwa
 
 Umso mehr Daten entstehen und genutzt werden sollen, desto größer wird der Verarbeitungsaufwand. Der größere Verarbeitungsaufwand macht sich bemerkbar durch eine erhöhte Auslastung der Verarbeitungssysteme. Die erhöhte Auslastung kann dann, wenn nicht genügend Rechenleistung verfügbar ist, zu erheblich erhöhten Zeitverzögerungen führen.
 
-Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auch die Abtastzeiten gegebenenfalls unterscheiden, muss das Verarbeitungssystem einen erheblichen zusätzlichen Aufwand betreiben, um die Daten der einzelnen unterschiedlichen Sensoren synchronisieren.
+Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auch die Abtastzeiten gegebenenfalls unterscheiden, muss das Verarbeitungssystem einen erheblichen zusätzlichen Aufwand betreiben, um die Daten der einzelnen unterschiedlichen Sensoren zu synchronisieren.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -28,12 +28,13 @@ Der Einsatz von mehreren Sensoren erfordert allerdings, dass die Messdaten zusam
 
 \subsection*{Allgemein}
 
-Die einzelnen Sensoren sind über eine Verbindung mit dem Verarbeitungssystem verbunden. Das Verarbeitungssystem fusioniert die Daten der einzelnen Sensoren. Die Anwendungen greifen auf das Verarbeitungssystem zu, um die fusionierten Daten verwenden zu können. Die zugreifende Anwendung kann basierend auf den vorhandenen Daten Entscheidungen treffen. In Abbildung x ist der Aufbau eines Systems zur Sensordatenfusion dargestellt.
+Die einzelnen Sensoren sind über eine Verbindung mit dem Verarbeitungssystem verbunden. Das Verarbeitungssystem fusioniert die Daten der einzelnen Sensoren. Die Anwendungen greifen auf das Verarbeitungssystem zu, um die fusionierten Daten verwenden zu können. Die zugreifende Anwendung kann basierend auf den vorhandenen Daten Entscheidungen treffen. In Abbildung \ref{Abb_AufbauSensordatenfusion} ist der Aufbau eines Systems zur Sensordatenfusion dargestellt.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/aufbau_allgemein.png}}
  \caption {Aufbau eines Systems zur Sensordatenfusion}
+ \label{Abb_AufbauSensordatenfusion} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -43,9 +44,9 @@ Die Sensoren werden für die Sensordatenfusion nach einer bestimmten Strategie ge
 
 Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch unterschiedlicher Sensoren in einem Netzwerk verstanden.
 
-Die Sensornetzwerke werden zwischen zwei Typen unterschieden. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen.
+Die Sensornetzwerke werden zwischen zwei Typen unterschieden \cite{Ref_StuekerHomogeneSDF}. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk \cite{Ref_StuekerHomogeneSDF}. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen \cite{Ref_StuekerHomogeneSDF}.
 
-In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen einzelner Sensoren.
+In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen \cite{Ref_StuekerHomogeneSDF}. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen einzelner Sensoren \cite{Ref_StuekerHomogeneSDF}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,12 +79,13 @@ Bei der unabhängigen Fusion werden die Messdaten von mehreren Sensoren verarbeit
 
 \subsubsection*{Kombinierte Fusion}
 
-Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jeweiligen Nachteile der verschiedenen Fusionen zu kompensieren, werden die Fusionen, redundante und kompetitive  Fusion, komplementäre  Fusion und kooperative  Fusion, miteinander kombiniert. Die unabhängige Fusion wird an dieser Stelle nicht verwendet, da sie keine Vorteile mit sich bringt.
+Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jeweiligen Nachteile der verschiedenen Fusionen zu kompensieren, werden die Fusionen, redundante und kompetitive  Fusion, komplementäre  Fusion und kooperative  Fusion, miteinander kombiniert. Ein Beispiel für die kombinierte Fusion ist in Abbildung \ref{Abb_AutoSensorenKombinierteFusion} dargestellt. Die unabhängige Fusion wird an dieser Stelle nicht verwendet, da sie keine Vorteile mit sich bringt.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
  \caption {Sensorkonfiguration: Kombinierte Fusion am Auto}
+ \label{Abb_AutoSensorenKombinierteFusion} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -125,7 +127,7 @@ Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Messdaten kom
 \section*{Vorteile}
 
 Als erstes wird der Nachteil ausgeglichen, dass normalerweise nur ein Sensor verwendet wird. Bei der Sensordatenfusion werden mehrere Sensoren eingesetzt. Dies hat den Vorteil, dass die Schätzgenauigkeit verbessert wird. Des Weiteren wird der Gesamterfassungsbereich durch den Einsatz von mehreren Sensoren vergrößert. 
-Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht. Dadurch dürfen einzelne Sensoren auch ausfallen, ohne dass sie die Funktionsfähigkeit einschränken. Aber durch den Ausfall von Sensoren bei der Sensordatenfusion kann sich die durch die Sensordatenfusion verbesserte Schätzgenauigkeit und Robustheit wieder verschlechtern. Auch die gewonnene Robustheit des Gesamtsystems kann sich durch den Ausfall mehrere Sensoren verschlechtern, da unter Umständen Sensoren ausfallen, die unter bestimmten Umweltbedingungen besser arbeiten, als andere. Um die Ausfallsicherheit nicht zu gefährden, werden die Sensoren mit Redundanz ausgelegt. Es bedeutet, dass Sensoren, die zwingend erforderlich für die Sicherheit oder die Funktionsfähigkeit sind, mehrfach im Sensornetzwerk eingebunden werden.
+Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht \cite{Ref_StuekerHomogeneSDF}. Dadurch dürfen einzelne Sensoren auch ausfallen\cite{Ref_StuekerHomogeneSDF}, ohne dass sie die Funktionsfähigkeit einschränken. Aber durch den Ausfall von Sensoren bei der Sensordatenfusion kann sich die durch die Sensordatenfusion verbesserte Schätzgenauigkeit und Robustheit wieder verschlechtern. Auch die gewonnene Robustheit des Gesamtsystems kann sich durch den Ausfall mehrere Sensoren verschlechtern, da unter Umständen Sensoren ausfallen, die unter bestimmten Umweltbedingungen besser arbeiten, als andere. Um die Ausfallsicherheit nicht zu gefährden, werden die Sensoren mit Redundanz ausgelegt. Es bedeutet, dass Sensoren, die zwingend erforderlich für die Sicherheit oder die Funktionsfähigkeit sind, mehrfach im Sensornetzwerk eingebunden werden.
 
 Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfahren verwenden, beispielsweise Radar und Laserabstandssensoren, können die unterschiedlichen Stärken der Wahrnehmungsverfahren zusammengeführt werden und verbessern die Wahrnehmung des Erfassungsbereichs. Die Nachteile einzelner Wahrnehmungsverfahren der Sensoren, die unter bestimmten Umweltbedingungen entstehen können, werden ausgeglichen, da die Wahrnehmung in solchen Fällen beispielsweise hauptsächlich durch einen oder mehrere andere Sensoren übernommen wird. Die Fähigkeit die Umgebung ausreichend zu erfassen, wird somit auch in für einzelne Sensoren schwierigen Situationen gewährleistet.
 
@@ -138,15 +140,15 @@ Die Sensordatenfusion hat ebenfalls den Vorteil, dass günstigere Sensoren verwen
 %\newpage
 \section*{Nachteile}
 
-Umso mehr Sensoren verwendet werden sollen, desto schwieriger wird die Integration der Sensoren. Gründe hierfür sind der erhöhte Aufwand für die Verkabelung, der weitere notwendige Platz für die Sensoren, sowie die Versorgung der Sensoren mit Strom. Aus dem erhöhten Aufwand für die Verkabelung resultieren direkt steigende Kosten für die Verkabelung, um alle verbauten Sensoren einzubinden.
+Umso mehr Sensoren verwendet werden sollen, desto schwieriger wird die Integration der Sensoren \cite{Ref_WikiSDF}. Gründe hierfür sind der erhöhte Aufwand für die Verkabelung, der weitere notwendige Platz für die Sensoren, sowie die Versorgung der Sensoren mit Strom. Aus dem erhöhten Aufwand für die Verkabelung resultieren direkt steigende Kosten für die Verkabelung, um alle verbauten Sensoren einzubinden \cite{Ref_WikiSDF}.
 
-Mit der Anzahl der Sensoren steigen ebenfalls die Datenmengen der Sensoren, die über die Kommunikationssysteme übertragen werden. In einigen Situationen wird versucht die Datentransferraten im Kommunikationssystem zu erhöhen, damit die größere Datenmenge nicht für eine erhebliche Erhöhung der benötigten Zeit zur Übertragung der Daten an das Verarbeitungssystem. 
+Mit der Anzahl der Sensoren steigen ebenfalls die Datenmengen der Sensoren, die über die Kommunikationssysteme übertragen werden. In einigen Situationen wird versucht die Datentransferraten im Kommunikationssystem zu erhöhen \cite{Ref_WikiSDF}, damit die größere Datenmenge nicht für eine erhebliche Erhöhung der benötigten Zeit zur Übertragung der Daten an das Verarbeitungssystem.
 
-Können die Datentransferraten nicht so stark erhöht werden, sodass der Mehraufwand für den Transfer der zusätzlichen Datenmengen ausgeglichen werden kann, entsteht ein deutlich erhöhter Zeitbedarf für die Übertragung der Daten der Sensoren zum Verarbeitungsziel.
+Können die Datentransferraten nicht so stark erhöht werden, sodass der Mehraufwand für den Transfer der zusätzlichen Datenmengen ausgeglichen werden kann, entsteht ein deutlich erhöhter Zeitbedarf für die Übertragung der Daten der Sensoren zum Verarbeitungsziel \cite{Ref_WikiSDF}.
 
 Umso mehr Daten entstehen und genutzt werden sollen, desto größer wird der Verarbeitungsaufwand. Der größere Verarbeitungsaufwand macht sich bemerkbar durch eine erhöhte Auslastung der Verarbeitungssysteme. Die erhöhte Auslastung kann dann, wenn nicht genügend Rechenleistung verfügbar ist, zu erheblich erhöhten Zeitverzögerungen führen.
 
-Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auch die Abtastzeiten gegebenenfalls unterscheiden, muss das Verarbeitungssystem einen erheblichen zusätzlichen Aufwand betreiben, um die Daten der einzelnen unterschiedlichen Sensoren zu synchronisieren.
+Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auch die Abtastzeiten gegebenenfalls unterscheiden, muss das Verarbeitungssystem einen erheblichen zusätzlichen Aufwand betreiben, um die Daten der einzelnen unterschiedlichen Sensoren zu synchronisieren \cite{Ref_WikiSDF}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -186,11 +188,10 @@ Stüker, D.: \textit{"'Heterogene Sensordatenfusion zur robusten Objektverfolgung
 Wikipedia, Online Nachschlagewerk: \textit{"'Sensordatenfusion"'}, xyz
 
 \bibitem{Ref_UniSiegenSensor}
-Universität-GH Siegen, Zentrum fu?r Sensorsysteme: \textit{"'Sensordatenfusion mit Kalman-Filtern Optimale Informationsverarbeitung"'}, xyz
+Universität-GH Siegen, Zentrum für Sensorsysteme: \textit{"'Sensordatenfusion mit Kalman-Filtern Optimale Informationsverarbeitung"'}, xyz
 
 \bibitem{Ref_SDFquadrocopter}
 Lange, S.: \textit{"'Faktorgraph-basierte Sensordatenfusion zur Anwendung auf einem Quadrocopter"'}, xyz
-
 
 \end{thebibliography}
 

@@ -4,64 +4,76 @@
 
 \part{Sensordatenfusion}
 \begin{center}
-Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ E-Mail: janfabian.fabriczek@stud.hs-esslingen.de \\[1cm] 01. April 2019 \\[1cm]
+Janfabian Fabriczek, \\ Geschwister-Scholl-Straße 15, 73732 Esslingen,\\ E-Mail: janfabian.fabriczek@stud.hs-esslingen.de \\[1cm] 18. April 2019 \\[1cm]
 \end{center}
 
 
 %---------------------------------------------------------------------------------------------------------------------------
 % Textteil
 %---------------------------------------------------------------------------------------------------------------------------
-\section*{Einleitung}
-\label{Kap_Einleitung}
+\section*{Einleitung und Motivation}
 
-Das autonome Fahren hat für die Automobilbranche einen hohen Stellenwert. Ein Computer steuert das Auto ohne menschlichen Einfluss. Damit der Computer im Auto genau weiß wie, wann und wo es fahren kann und muss, muss es die Umgebung wahrnehmen können.
+Das autonome Fahren hat für die Automobilbranche einen hohen Stellenwert. Ein Computer steuert das Automobil ohne menschlichen Einfluss. Damit der Computer im Automobil genau weiß, wie, wann und wo es fahren kann und muss, muss es die Umgebung wahrnehmen können.
 
-Um die Umgebung wahrnehmen zu können, werden Sensoren am Auto verwendet. In der Außenwelt gibt es viele verschiedene Wetterbedingungen, die die Sensoren so stark beeinflussen können, dass sie ihren Zweck nicht mehr erfüllen können. Der Einsatz mehrerer Sensoren mit unterschiedlichen Wahrnehmungsverfahren hilft, die Blindheit des Autos zu vermeiden und somit auch die Sicherheit neben der Funktionsfähigkeit zu gewährleisten.
+Um die Umgebung wahrnehmen zu können, werden Sensoren am Automobil verwendet. In der Außenwelt gibt es viele verschiedene Wetterbedingungen, die die Sensoren so stark beeinflussen können, dass sie ihren Zweck nicht mehr erfüllen können. Der Einsatz mehrerer Sensoren mit unterschiedlichen Wahrnehmungsverfahren hilft dabei, die Blindheit des Automobils zu vermeiden und somit auch die Sicherheit neben der Funktionsfähigkeit zu gewährleisten.
 
 Der Einsatz von mehreren Sensoren erfordert allerdings, dass die Messdaten zusammengefasst werden und unter Verwendung der zusammengefassten Messdaten ein komplettes Abbild der Umgebung erstellt wird. Unter dem Begriff \textit{Sensordatenfusion} wird das Zusammenführen der Sensordaten verstanden.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\newpage
+\newpage
 \section*{Aufbau}
 
 \subsection*{Allgemein}
 
-Die einzelnen Sensoren sind über eine Verbindung mit dem Verarbeitungssystem verbunden. Das Verarbeitungssystem fusioniert die Daten der einzelnen Sensoren. Die Anwendungen greifen auf das Verarbeitungssystem zu, um die fusionierten Daten verwenden zu können. Die zugreifende Anwendung kann basierend auf den vorhandenen Daten Entscheidungen treffen. In Abbildung \ref{Abb_AufbauSensordatenfusion} ist der Aufbau eines Systems zur Sensordatenfusion dargestellt.
+Die einzelnen Sensoren sind über eine Verbindung mit dem Verarbeitungssystem verbunden \cite{Ref_WikiSDF}. Das Verarbeitungssystem fusioniert die Daten der einzelnen Sensoren \cite{Ref_WikiSDF}. Die Anwendungen greifen auf das Verarbeitungssystem zu, um die fusionierten Daten verwenden zu können \cite{Ref_WikiSDF}. Die zugreifende Anwendung kann basierend auf den vorhandenen Daten Entscheidungen treffen. In Abbildung \ref{Abb_AufbauSensordatenfusion} ist der Aufbau eines Systems zur Sensordatenfusion dargestellt.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/aufbau_allgemein.png}}
- \caption {Aufbau eines Systems zur Sensordatenfusion}
+ \caption {Aufbau eines Systems zur Sensordatenfusion \cite{Ref_WikiSDF}}
  \label{Abb_AufbauSensordatenfusion} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Die Sensoren werden für die Sensordatenfusion nach einer bestimmten Strategie gewählt. Die einzelnen Strategien werden im Folgenden behandelt.
+Die Sensoren werden für die Sensordatenfusion nach einer bestimmten Strategie gewählt und angeordnet. Die einzelnen Strategien werden im Folgenden behandelt.
 
 \subsection*{Sensoranordnung}
 
+Die Sensoren werden in einem oder mehreren Sensornetzwerken angeordnet \cite{Ref_StuekerHomogeneSDF}.
+
 Unter einem Sensornetzwerk wird der Verbund mehrerer gleicher oder auch unterschiedlicher Sensoren in einem Netzwerk verstanden.
 
-Die Sensornetzwerke werden zwischen zwei Typen unterschieden \cite{Ref_StuekerHomogeneSDF}. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk \cite{Ref_StuekerHomogeneSDF}. In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen somit alle den gleichen Einschränkungen \cite{Ref_StuekerHomogeneSDF}.
+Die Sensornetzwerke werden zwischen zwei Typen unterschieden \cite{Ref_StuekerHomogeneSDF}. Der eine Typ ist das homogene Sensornetzwerk und der andere Typ ist das heterogene Sensornetzwerk \cite{Ref_StuekerHomogeneSDF}.
+
+In einem homogenen Sensornetzwerk verwenden alle Sensoren dasselbe physikalische Prinzip zum Messen. Die Sensoren in einem solchen Netzwerk unterliegen daher alle den gleichen Einschränkungen \cite{Ref_StuekerHomogeneSDF}.
 
 In einem heterogenen Sensornetzwerk verwenden die Sensoren unterschiedliche physikalische Prinzipien zum Messen \cite{Ref_StuekerHomogeneSDF}. Die Sensoren in einem heterogenen Sensornetzwerk kompensieren die Einschränkungen einzelner Sensoren \cite{Ref_StuekerHomogeneSDF}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Sensorkonfiguration}
+\newpage
 
-Bei der Fusion wird zwischen verschiedenen Typen unterschieden. Im Folgenden werden die einzelnen Fusionstypen dargestellt.
+
+\section*{Funktionsweise}
+
+\subsection*{Allgemein}
+
+Die Fusion wird von einem Verarbeitungssystem unter der Verwendung von Algorithmen und mathematischen Verfahren durchgeführt. Bei der Fusion werden die Daten der einzelnen Sensoren synchronisiert, mehrere Eigenschaften zu neuen Eigenschaften zusammengefügt und einzelne Erfassungsbereiche zu einem größeren Erfassungsbereich zusammengefügt.
+
+\subsection*{Fusionstypen}
+
+Bei der Fusion wird zwischen Fusionstypen unterschieden. Der gewählte Fusionstyp hat Auswirkung auf die Sensorenauswahl und wofür die Messdaten der Sensoren bei der Fusion verwendet werden. Im Folgenden werden die einzelnen Typen erläutert.
 
 \subsubsection*{Redundante und kompetitive Fusion}
 
 Bei der redundanten oder auch kompetitiven Fusion geschieht die Sammlung der Daten zur Fusion durch den Einsatz mehrerer identischer Sensoren mit demselben Erfassungsbereich, die in einem Sensornetzwerk zusammengefügt sind \cite{Ref_StuekerHomogeneSDF}.
 
-Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Fusionstyp nicht der Gesamterfassungsbereich \cite{Ref_StuekerHomogeneSDF}.
+Da alle eingesetzten Sensoren denselben Erfassungsbereich haben, erhöht sich durch diesen Typ nicht der Gesamterfassungsbereich \cite{Ref_StuekerHomogeneSDF}.
 
-Das Ziel dieses Fusionstyps ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit \cite{Ref_StuekerHomogeneSDF}. Die Erhöhung der Genauigkeit resultiert durch die weiteren Sensoren, die durch das Sensornetzwerk der Fusion zur Verfügung stehen, die weitere Messwerte erfassen \cite{Ref_StuekerHomogeneSDF}. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Bereich erfassen und somit der Bereich auch dann noch erfasst wird, wenn mehrere Sensoren ausfallen \cite{Ref_StuekerHomogeneSDF}.
+Das Ziel dieses Typs ist die Erhöhung der Genauigkeit der Beobachtung und die Verbesserung der Ausfallsicherheit \cite{Ref_StuekerHomogeneSDF}. Die Erhöhung der Genauigkeit entsteht durch die weiteren Sensoren, die durch das Sensornetzwerk zur Fusion zur Verfügung stehen, die weitere Messwerte erfassen \cite{Ref_StuekerHomogeneSDF}. Die Ausfallsicherheit verbessert sich, da mehrere Sensoren denselben Erfassungsbereich erfassen und somit der Erfassungsbereich auch dann noch erfasst wird, wenn einzelne Sensoren ausfallen \cite{Ref_StuekerHomogeneSDF}.
 
 \subsubsection*{Komplementäre Fusion}
 
@@ -84,26 +96,16 @@ Die einzelnen betrachteten Fusionen haben jeweils Vor- und Nachteile. Um die jew
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
  \centerline{\includegraphics[width=0.41\textwidth]{Name_JFBR/car_sensors.jpg}}
- \caption {Sensorkonfiguration: Kombinierte Fusion am Auto}
+ \caption {Fusionstyp: Kombinierte Fusion am Auto \cite{Ref_AutonousDrivingCriticism}}
  \label{Abb_AutoSensorenKombinierteFusion} 
 \end{figure}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newpage
-
-
-\section*{Funktionsweise}
-
-\subsection*{Allgemein}
-
-Die Fusion wird von einem Verarbeitungssystem unter der Verwendung von Algorithmen und mathematischen Verfahren durchgeführt. Bei der Fusion werden die Daten der einzelnen Sensoren synchronisiert, mehrere Eigenschaften zu neuen Eigenschaften zusammengefügt und einzelne Erfassungsbereiche zu einem größeren Erfassungsbereich zusammengefügt.
 
 \subsection*{Fusionsverfahren}
 
-Die unterschiedlichen Fusionsverfahren werden im Folgenden im Detail betrachtet.
+Die Fusion erfolgt nach einem bestimmten Verfahren. Das Verfahren ist abhängig von der Ebene, auf der die Fusion stattfinden soll. Im Folgenden werden die einzelnen Verfahren erläutert.
 
 \subsubsection*{Fusion über Sensoren}
 
@@ -115,25 +117,25 @@ Bei der Fusion über Eigenschaften werden einzelne Eigenschaften, die durch Senso
 
 \subsubsection*{Fusion über Bereiche}
 
-Bei der Fusion über Bereiche erfassen mehrere Sensoren die gleiche Eigenschaft, aber in unterschiedlichen räumlichen Bereichen \cite{Ref_KochMSDF}. Die Messdaten der Sensoren werden zu einem Abbild fusioniert. Durch diese Fusion wird der Gesamtbereich der erfassten Eigenschaft vergrößert \cite{Ref_KochMSDF}.
+Bei der Fusion über Bereiche erfassen mehrere Sensoren die gleiche Eigenschaft, aber in unterschiedlichen räumlichen Bereichen \cite{Ref_KochMSDF}. Die Daten der Sensoren werden zu einem Abbild fusioniert. Durch diese Fusion wird der Gesamtbereich der erfassten Eigenschaft vergrößert \cite{Ref_KochMSDF}.
 
 \subsubsection*{Fusion über Zeit}
 
-Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Messdaten kombiniert \cite{Ref_KochMSDF}. Ältere Daten können ältere Messdaten oder auch Daten von der Kalibrierung sein \cite{Ref_KochMSDF}.
+Bei der Fusion über die Zeit werden ältere Daten mit den aktuellen Daten kombiniert \cite{Ref_KochMSDF}. Ältere Daten können ältere Messdaten oder auch Daten von der Kalibrierung sein \cite{Ref_KochMSDF}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\newpage
 \section*{Vorteile}
 
-Als erstes wird der Nachteil ausgeglichen, dass normalerweise nur ein Sensor verwendet wird. Bei der Sensordatenfusion werden mehrere Sensoren eingesetzt. Dies hat den Vorteil, dass die Schätzgenauigkeit verbessert wird. Des Weiteren wird der Gesamterfassungsbereich durch den Einsatz von mehreren Sensoren vergrößert. 
-Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht \cite{Ref_StuekerHomogeneSDF}. Dadurch dürfen einzelne Sensoren auch ausfallen\cite{Ref_StuekerHomogeneSDF}, ohne dass sie die Funktionsfähigkeit einschränken. Aber durch den Ausfall von Sensoren bei der Sensordatenfusion kann sich die durch die Sensordatenfusion verbesserte Schätzgenauigkeit und Robustheit wieder verschlechtern. Auch die gewonnene Robustheit des Gesamtsystems kann sich durch den Ausfall mehrere Sensoren verschlechtern, da unter Umständen Sensoren ausfallen, die unter bestimmten Umweltbedingungen besser arbeiten, als andere. Um die Ausfallsicherheit nicht zu gefährden, werden die Sensoren mit Redundanz ausgelegt. Es bedeutet, dass Sensoren, die zwingend erforderlich für die Sicherheit oder die Funktionsfähigkeit sind, mehrfach im Sensornetzwerk eingebunden werden.
+Als erstes wird der Nachteil ausgeglichen, dass normalerweise nur ein Sensor verwendet wird. Bei der Sensordatenfusion werden mehrere Sensoren eingesetzt. Dies hat den Vorteil, dass die Schätzgenauigkeit verbessert wird \cite{Ref_StuekerHomogeneSDF}. Des Weiteren wird der Gesamterfassungsbereich durch den Einsatz von mehreren Sensoren vergrößert \cite{Ref_StuekerHomogeneSDF}. 
+Darüber hinaus wird auch eine Verbesserung der Ausfallsicherheit erreicht \cite{Ref_StuekerHomogeneSDF}. Dadurch dürfen einzelne Sensoren auch ausfallen \cite{Ref_StuekerHomogeneSDF}, ohne dass sie die Funktionsfähigkeit einschränken. Aber durch den Ausfall von Sensoren bei der Sensordatenfusion kann sich die durch die Sensordatenfusion verbesserte Schätzgenauigkeit und Robustheit wieder verschlechtern \cite{Ref_UniSiegenSensor}. Auch die gewonnene Robustheit des Gesamtsystems kann sich durch den Ausfall mehrere Sensoren verschlechtern, da unter Umständen Sensoren ausfallen, die unter bestimmten Umweltbedingungen besser arbeiten, als andere. Um die Ausfallsicherheit nicht zu gefährden, werden die Sensoren mit Redundanz ausgelegt \cite{Ref_StuekerHomogeneSDF}. Es bedeutet, dass Sensoren, die zwingend erforderlich für die Sicherheit oder die Funktionsfähigkeit sind, mehrfach im Sensornetzwerk eingebunden werden.
 
-Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfahren verwenden, beispielsweise Radar und Laserabstandssensoren, können die unterschiedlichen Stärken der Wahrnehmungsverfahren zusammengeführt werden und verbessern die Wahrnehmung des Erfassungsbereichs. Die Nachteile einzelner Wahrnehmungsverfahren der Sensoren, die unter bestimmten Umweltbedingungen entstehen können, werden ausgeglichen, da die Wahrnehmung in solchen Fällen beispielsweise hauptsächlich durch einen oder mehrere andere Sensoren übernommen wird. Die Fähigkeit die Umgebung ausreichend zu erfassen, wird somit auch in für einzelne Sensoren schwierigen Situationen gewährleistet.
+Durch den Einsatz von mehreren Sensoren, die unterschiedliche Wahrnehmungsverfahren verwenden, beispielsweise Radar und Laserabstandssensoren, können die unterschiedlichen Stärken der Wahrnehmungsverfahren zusammengeführt werden und verbessern die Wahrnehmung des Erfassungsbereichs. Die Nachteile einzelner Wahrnehmungsverfahren der Sensoren, die unter bestimmten Umweltbedingungen entstehen können, werden ausgeglichen, da die Wahrnehmung in solchen Fällen beispielsweise hauptsächlich durch einen oder mehrere andere Sensoren übernommen wird \cite{Ref_SDFquadrocopter}. Die Fähigkeit die Umgebung ausreichend zu erfassen, wird somit auch in für einzelne Sensoren schwierigen Situationen gewährleistet.
 
-Durch die Verwendung mehrerer Sensoren, die nach unterschiedlichen Wahrnehmungsverfahren arbeiten, können mehr Informationen der Umgebung erfasst werden.
+Durch die Verwendung mehrerer Sensoren, die nach unterschiedlichen Wahrnehmungsverfahren arbeiten, können mehr Informationen der Umgebung erfasst werden \cite{Ref_UniSiegenSensor}.
 
-Die Sensordatenfusion hat ebenfalls den Vorteil, dass günstigere Sensoren verwendet werden können. Ohne die Sensordatenfusion müssen Sensoren verwendet werden, dessen Einschränkungen nicht problematisch für den eingesetzten Zweck sind. In diesen Fällen sind die Sensoren, die dann aber benötigt werden sehr teuer. Wenn mehrere einzelne Sensoren verwendet werden, können die Sensoren unter Berücksichtigung des physikalischen Prinzips zur Wahrnehmung so gewählt werden, dass Einschränkungen einzelner Sensoren durch andere Sensoren im System ausgeglichen werden können.
+Die Sensordatenfusion hat ebenfalls den Vorteil, dass günstigere Sensoren verwendet werden können. Ohne die Sensordatenfusion müssen Sensoren verwendet werden, dessen Einschränkungen nicht problematisch für den eingesetzten Zweck sind. In diesen Fällen sind die Sensoren, die dann aber benötigt werden sehr teuer. Wenn mehrere einzelne Sensoren verwendet werden, können die Sensoren unter Berücksichtigung des physikalischen Prinzips zur Wahrnehmung so gewählt werden, dass Einschränkungen einzelner Sensoren durch andere Sensoren im System ausgeglichen werden können \cite{Ref_SDFquadrocopter}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -152,18 +154,10 @@ Da nicht alle Sensoren die Umgebung zum gleichen Zeitpunkt erfassen und sich auc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\newpage
+\newpage
 \section*{Einsatzgebiete}
 
 Die Sensordatenfusion wird in vielen Bereichen eingesetzt. Vor allem in den Bereichen des autonomen Fahrens und des autonomen Fliegens hat es eine hohe Bedeutung. In diesen beiden Bereichen werden hohe und auch sicherheitskritische Anforderungen an die maschinelle Erfassung der Umgebung gestellt. Die Anforderungen gestatten die Verwendung eines einzelnen Sensors nicht mehr.
-
-Im Folgenden werden drei Einsatzgebiete im Detail betrachtet.
-
-\subsection*{Objekterkennung}
-
-\subsection*{Positionsermittlung}
-
-\subsection*{Fahrerassistenzsysteme}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
@@ -177,21 +171,23 @@ Cras sagittis, ligula quis condimentum laoreet, lacus nisl pretium ligula, sed r
 
 \begin{thebibliography}{}
 
+\bibitem{Ref_WikiSDF}
+Wikipedia, Online Nachschlagewerk: \textit{"'Sensordatenfusion"'},\\  \href{https://de.wikipedia.org/wiki/Sensordatenfusion}{https://de.wikipedia.org/wiki/Sensordatenfusion}, April 2019
+
+\bibitem{Ref_StuekerHomogeneSDF}
+Stüker, Dirk: \textit{"'Heterogene Sensordatenfusion zur robusten Objektverfolgung im automobilen Straßenverkehr"'},\\  \href{https://d-nb.info/972494464/34}{https://d-nb.info/972494464/34}, April 2019
+
+\bibitem{Ref_AutonousDrivingCriticism}
+Ptock, Julia: \textit{"'Autonomes Fahren: Verbraucherschutz kritisiert Gesetzesentwurf der Regierung"'},\\  \href{https://www.logistik-watchblog.de/neuheiten/844-autonomes-fahren-verbraucherschutz-kritisiert-gesetzesentwurf.html}{https://www.logistik-watchblog.de/neuheiten/844-autonomes-fahren-verbraucherschutz-kritisiert-gesetzesentwurf.html}, April 2019
 
 \bibitem{Ref_KochMSDF}
 Mitchell, Harvey B.: \textit{"'Multi-Sensor Data Fusion: An Introduction"'},\\  \href{https://d-nb.info/972494464/34}{https://d-nb.info/972494464/34}, 1. Auflage, Springer Berlin Heidelberg, 2007
-
-\bibitem{Ref_StuekerHomogeneSDF}
-Stüker, D.: \textit{"'Heterogene Sensordatenfusion zur robusten Objektverfolgung im automobilen Straßenverkehr"'},\\  \href{https://d-nb.info/972494464/34}{https://d-nb.info/972494464/34}, April 2019
-
-\bibitem{Ref_WikiSDF}
-Wikipedia, Online Nachschlagewerk: \textit{"'Sensordatenfusion"'},\\  \href{https://de.wikipedia.org/wiki/Sensordatenfusion}{https://de.wikipedia.org/wiki/Sensordatenfusion}, April 2019
 
 \bibitem{Ref_UniSiegenSensor}
 Universität-GH Siegen, Zentrum für Sensorsysteme: \textit{"'Sensordatenfusion mit Kalman-Filtern Optimale Informationsverarbeitung"'},\\  \href{https://www.uni-siegen.de/zess/profil/929604.pdf}{https://www.uni-siegen.de/zess/profil/929604.pdf}, April 2019
 
 \bibitem{Ref_SDFquadrocopter}
-Lange, S.: \textit{"'Faktorgraph-basierte Sensordatenfusion zur Anwendung auf einem Quadrocopter"'},\\  \href{http://www.qucosa.de/fileadmin/data/qucosa/documents/13057/diss\_lasve\_final.pdf}{http://www.qucosa.de/fileadmin/data/qucosa/documents /13057/diss\_lasve\_final.pdf}, April 2019
+Lange, Sven: \textit{"'Faktorgraph-basierte Sensordatenfusion zur Anwendung auf einem Quadrocopter"'},\\  \href{http://www.qucosa.de/fileadmin/data/qucosa/documents/13057/diss\_lasve\_final.pdf}{http://www.qucosa.de/fileadmin/data/qucosa/documents /13057/diss\_lasve\_final.pdf}, April 2019
 
 
 \end{thebibliography}
